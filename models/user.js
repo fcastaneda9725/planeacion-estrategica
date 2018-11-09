@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
     rol_de_usuario: DataTypes.INTEGER,
     created_at: DataTypes.DATE,
     updated_at: DataTypes.DATE
-  }, {
+  },{
     charset: 'utf8',
     collate: 'utf8_unicode_ci'
   });
