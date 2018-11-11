@@ -1,23 +1,29 @@
 'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('users', {
-      id: {
+    return queryInterface.createTable('planeacion_estrategica', {
+      id_planeacion_estrategica: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      mail: {
-        type: Sequelize.STRING
-      },
-      password: {
-        type: Sequelize.STRING
-      },
-      id_detalle_usuario: {
+      id_identificacion: {
         type: Sequelize.INTEGER
       },
-      rol_de_usuario: {
+      id_intenciones: {
+        type: Sequelize.INTEGER
+      },
+      id_actividades_aprendizaje: {
+        type: Sequelize.INTEGER
+      },
+      id_recurso: {
+        type: Sequelize.INTEGER
+      },
+      id_instrumentos_evaluacion: {
+        type: Sequelize.INTEGER
+      },
+      porcentaje: {
         type: Sequelize.INTEGER
       },
       createdAt: {
@@ -31,6 +37,6 @@ module.exports = {
     });
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('users');
+    return queryInterface.dropTable('planeacion_estrategica');
   }
 };
