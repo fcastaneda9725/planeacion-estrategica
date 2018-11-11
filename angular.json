@@ -30,9 +30,7 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": [
-              "sequelize db:migrate"
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
