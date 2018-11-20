@@ -10,7 +10,10 @@ module.exports = (sequelize, DataTypes) => {
     updated_at: DataTypes.DATE
   }, {});
   user.associate = function(models) {
-    // associations can be defined here
+    user.belongsTo(models.detalle_usuarios,{
+      foreignKey: 'id_detalle_usuario',
+      targetKey: 'id_detalle_usuario'
+    });
   };
   return user;
 };
