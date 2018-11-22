@@ -3,10 +3,12 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 
 import { LoginComponent } from '../app/login/login.component';
+import { RegistroComponent } from '../app/registro/registro.component';
 
 const routes : Routes = [
 
-  { path: 'login', component: LoginComponent }
+  { path: '', component: LoginComponent }
+  { path: 'registro', component: RegistroComponent }
 
 ];
 
