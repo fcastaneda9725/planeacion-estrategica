@@ -58,7 +58,7 @@
 										<div class="input-group-prepend">
 											<span class="input-group-text">Nombre de Institución:</span>
 										</div>
-										<select class="custom-select" id="instituciones"><option selected="">Instituciones...</option><option value="1">Colegio de Estudios Científicos y Tecnológicos del Estado de México</option></select>
+										<select class="custom-select" id="instituciones"><option selected="">Instituciones...</option><option *ngFor="let opins of Opins" value="1">{{opins}}</option></select>
 									</div>
 								</div>
 							</form>
@@ -69,7 +69,7 @@
 										<div class="input-group-prepend">
 											<span class="input-group-text">Plantel:</span>
 										</div>
-										<select class="custom-select" id="planteles"><option selected="">Escoger...</option><option value="1">Tequixquiac</option></select>
+										<select class="custom-select" id="planteles"><option selected="">Escoger...</option><option *ngFor="let opplan of Opplan">{{opplan}}</option></select>
 									</div>
 								</div>
 							</form>
@@ -80,7 +80,7 @@
 										<div class="input-group-prepend">
 											<span class="input-group-text">CCT:</span>
 										</div>
-										<select class="custom-select" id="cct"><option selected="">Claves...</option><option value="1">15ETC0042H</option></select>
+										<select class="custom-select" id="cct"><option selected="">Claves...</option><option *ngFor="let opcct of Opcct" value="1">{{opcct}}</option></select>
 									</div>
 								</div>
 							</form>
@@ -102,7 +102,7 @@
 										<div class="input-group-prepend">
 											<span class="input-group-text">Asignatura:</span>
 										</div>
-										<select class="custom-select" id="Asignatura"><option selected="">Asignaturas...</option><option value="1">Álgebra</option></select>
+										<select class="custom-select" id="Asignatura"><option selected="">Asignaturas...</option><option *ngFor="let opasig of Opasig" value="1">{{opasig}}</option></select>
 									</div>
 									<label for="Modulo" class="sr-only control-label">Modulo:</label>
 									<div class="input-group">
@@ -125,7 +125,7 @@
 								<div class="form-group">
 									<label for="Semestre" class="control-label">Semestre:</label>
 									<div class="input-group">
-										<select class="custom-select" id="Semestre"><option selected="">Semestres...</option><option value="1">1°<br>2019-2019</option></select>
+										<select class="custom-select" id="Semestre"><option selected="">Semestres...</option><option *ngFor="let opsem of Opsem" value="1">{{opsem}}</option></select>
 									</div>
 								</div>
 							</form>
@@ -198,7 +198,7 @@
 										<div class="input-group-prepend">
 											<span class="input-group-text">Eje:</span>
 										</div>
-										<select class="custom-select" id="Eje"><option selected="">Escoger...</option></select>
+										<select class="custom-select" id="Eje"><option selected="">Escoger...</option><<option *ngFor="let opeje of Opeje" value="1">{{opeje}}</option></select>
 									</div>
 								</div>
 							</form>
@@ -209,7 +209,7 @@
 										<div class="input-group-prepend">
 											<span class="input-group-text">Componentes:</span>
 										</div>
-										<select class="custom-select" id="Componentes"><option selected="">Escoger...</option></select>
+										<select class="custom-select" id="Componentes"><option selected="">Escoger...</option><<option *ngFor="let opcom of Opcom" value="1">{{opcom}}</option></select>
 									</div>
 								</div>
 							</form>
@@ -220,7 +220,7 @@
 										<div class="input-group-prepend">
 											<span class="input-group-text">Contenido central:</span>
 										</div>
-										<select class="custom-select" id="Cc"><option selected="">Escoger...</option></select>
+										<select class="custom-select" id="Cc"><option selected="">Escoger...</option><<option *ngFor="let opCc of OpCc" value="1">{{opCc}}</option></select>
 									</div>
 								</div>
 							</form>
@@ -231,7 +231,7 @@
 										<div class="input-group-prepend">
 											<span class="input-group-text">Contenidos específicos:</span>
 										</div>
-										<select class="custom-select" id="Ce"><option selected="">Escoger...</option></select>
+										<select class="custom-select" id="Ce"><option selected="">Escoger...</option><<option *ngFor="let opCe of OpCe" value="1">{{OpCe}}</option></select>
 									</div>
 								</div>
 							</form>
@@ -253,7 +253,7 @@
 										<div class="input-group-prepend">
 											<span class="input-group-text">Productos esperados:</span>
 										</div>
-										<select class="custom-select" id="Pe"><option selected="">Escoger...</option></select>
+										<select class="custom-select" id="Pe"><option selected="">Escoger...</option><<option *ngFor="let opPE of OpPe" value="1">{{opPe}}</option></select>
 									</div>
 								</div>
 							</form>
@@ -264,7 +264,7 @@
 										<div class="input-group-prepend">
 											<span class="input-group-text">Competencias genéricas y atributos:</span>
 										</div>
-										<select class="custom-select" id="Cga"><option selected="">Escoger...</option></select>
+										<select class="custom-select" id="Cga"><option selected="">Escoger...</option><<option *ngFor="let opCga of OpCga" value="1">{{opCga}}</option></select>
 									</div>
 								</div>
 							</form>
@@ -275,7 +275,7 @@
 										<div class="input-group-prepend">
 											<span class="input-group-text">Competencias disciplinares:</span>
 										</div>
-										<select class="custom-select" id="Cd"><option selected="">Escoger...</option></select>
+										<select class="custom-select" id="Cd"><option selected="">Escoger...</option><<option *ngFor="let opCd of OpCd" value="1">{{opCd}}</option></select>
 									</div>
 								</div>
 							</form>
@@ -286,7 +286,7 @@
 										<div class="input-group-prepend">
 											<span class="input-group-text">Competencias profesionales:</span>
 										</div>
-										<select class="custom-select" id="Cp"><option selected="">Escoger...</option></select>
+										<select class="custom-select" id="Cp"><option selected="">Escoger...</option><<option *ngFor="let opCp of OpCp" value="1">{{opCp}}</option></select>
 									</div>
 								</div>
 							</form>
@@ -327,13 +327,13 @@
 								<div class="form-group">
 									<label for="NtM" class="control-label">Nivel<br>taxonómico<br>de<br>Marzano:</label>
 									<div class="input-group">
-										<select class="custom-select" id="NtM"><option selected="">Escoger...</option><option value="1">one</option></select>
+										<select class="custom-select" id="NtM"><option selected="">Escoger...</option><option *ngFor="let opNtM of OpNtM" value="1">{{opNtM}}</option></select>
 									</div>
 									<div class="input-group">
-										<select class="custom-select" id="NtM"><option selected="">Escoger...</option><option value="1">one</option></select>
+										<select class="custom-select" id="NtM"><option selected="">Escoger...</option><option *ngFor="let opNtM of OpNtM" value="1">{{opNtM}}</option></select>
 									</div>
 									<div class="input-group">
-										<select class="custom-select" id="NtM"><option selected="">Escoger...</option><option value="1">one</option></select>
+										<select class="custom-select" id="NtM"><option selected="">Escoger...</option><option *ngFor="let opNtM of OpNtM" value="1">{{opNtM}}</option></select>
 									</div>
 								</div>
 							</form>
@@ -388,16 +388,13 @@
 								<div class="form-group">
 									<label for="Eva" class="control-label">Evaluación:</label>
 									<div class="input-group">
-										<input type="text" class="form-control" id="Eva" aria-describedby= "basic-addon1" placeholder="Evaluación" />
-										<select class="custom-select" id="Eva"><option selected="">Escoger...</option></select>
+										<select class="custom-select" id="Eva"><option selected="">Escoger...</option><<option *ngFor="let opEva of OpEva" value="1">{{opEva}}</option></select>
 									</div>
 									<div class="input-group">
-										<input type="text" class="form-control" id="Eva" aria-describedby= "basic-addon1" placeholder="Evaluación" />
-										<select class="custom-select" id="Eva"><option selected="">Escoger...</option></select>
+										<select class="custom-select" id="Eva"><option selected="">Escoger...</option><<option *ngFor="let opEva of OpEva" value="1">{{opEva}}</option></select>
 									</div>
 									<div class="input-group">
-										<input type="text" class="form-control" id="Eva" aria-describedby= "basic-addon1" placeholder="Evaluación" />
-										<select class="custom-select" id="Eva"><option selected="">Escoger...</option></select>
+										<select class="custom-select" id="Eva"><option selected="">Escoger...</option><<option *ngFor="let opEva of OpEva" value="1">{{opEva}}</option></select>
 									</div>
 								</div>
 							</form>
@@ -411,18 +408,18 @@
 					            </div>
 				        	</div>
 						</div>
-						<div class="row col-md-12 clearfix">
+            <div class="row col-md-12 clearfix">
 							<form action="" class="form-horizontal col-md-2">
 								<div class="form-group">
 									<label for="NtM" class="control-label">Nivel<br>taxonómico<br>de<br>Marzano:</label>
 									<div class="input-group">
-										<select class="custom-select" id="NtM"><option selected="">Escoger...</option><option value="1">one</option></select>
+										<select class="custom-select" id="NtM"><option selected="">Escoger...</option><option *ngFor="let opNtM of OpNtM" value="1">{{opNtM}}</option></select>
 									</div>
 									<div class="input-group">
-										<select class="custom-select" id="NtM"><option selected="">Escoger...</option><option value="1">one</option></select>
+										<select class="custom-select" id="NtM"><option selected="">Escoger...</option><option *ngFor="let opNtM of OpNtM" value="1">{{opNtM}}</option></select>
 									</div>
 									<div class="input-group">
-										<select class="custom-select" id="NtM"><option selected="">Escoger...</option><option value="1">one</option></select>
+										<select class="custom-select" id="NtM"><option selected="">Escoger...</option><option *ngFor="let opNtM of OpNtM" value="1">{{opNtM}}</option></select>
 									</div>
 								</div>
 							</form>
@@ -477,16 +474,13 @@
 								<div class="form-group">
 									<label for="Eva" class="control-label">Evaluación:</label>
 									<div class="input-group">
-										<input type="text" class="form-control" id="Eva" aria-describedby= "basic-addon1" placeholder="Evaluación" />
-										<select class="custom-select" id="Eva"><option selected="">Escoger...</option></select>
+										<select class="custom-select" id="Eva"><option selected="">Escoger...</option><<option *ngFor="let opEva of OpEva" value="1">{{opEva}}</option></select>
 									</div>
 									<div class="input-group">
-										<input type="text" class="form-control" id="Eva" aria-describedby= "basic-addon1" placeholder="Evaluación" />
-										<select class="custom-select" id="Eva"><option selected="">Escoger...</option></select>
+										<select class="custom-select" id="Eva"><option selected="">Escoger...</option><<option *ngFor="let opEva of OpEva" value="1">{{opEva}}</option></select>
 									</div>
 									<div class="input-group">
-										<input type="text" class="form-control" id="Eva" aria-describedby= "basic-addon1" placeholder="Evaluación" />
-										<select class="custom-select" id="Eva"><option selected="">Escoger...</option></select>
+										<select class="custom-select" id="Eva"><option selected="">Escoger...</option><<option *ngFor="let opEva of OpEva" value="1">{{opEva}}</option></select>
 									</div>
 								</div>
 							</form>
@@ -500,18 +494,18 @@
 					            </div>
 				        	</div>
 						</div>
-						<div class="row col-md-12 clearfix">
+            <div class="row col-md-12 clearfix">
 							<form action="" class="form-horizontal col-md-2">
 								<div class="form-group">
 									<label for="NtM" class="control-label">Nivel<br>taxonómico<br>de<br>Marzano:</label>
 									<div class="input-group">
-										<select class="custom-select" id="NtM"><option selected="">Escoger...</option><option value="1">one</option></select>
+										<select class="custom-select" id="NtM"><option selected="">Escoger...</option><option *ngFor="let opNtM of OpNtM" value="1">{{opNtM}}</option></select>
 									</div>
 									<div class="input-group">
-										<select class="custom-select" id="NtM"><option selected="">Escoger...</option><option value="1">one</option></select>
+										<select class="custom-select" id="NtM"><option selected="">Escoger...</option><option *ngFor="let opNtM of OpNtM" value="1">{{opNtM}}</option></select>
 									</div>
 									<div class="input-group">
-										<select class="custom-select" id="NtM"><option selected="">Escoger...</option><option value="1">one</option></select>
+										<select class="custom-select" id="NtM"><option selected="">Escoger...</option><option *ngFor="let opNtM of OpNtM" value="1">{{opNtM}}</option></select>
 									</div>
 								</div>
 							</form>
@@ -566,16 +560,13 @@
 								<div class="form-group">
 									<label for="Eva" class="control-label">Evaluación:</label>
 									<div class="input-group">
-										<input type="text" class="form-control" id="Eva" aria-describedby= "basic-addon1" placeholder="Evaluación" />
-										<select class="custom-select" id="Eva"><option selected="">Escoger...</option></select>
+										<select class="custom-select" id="Eva"><option selected="">Escoger...</option><<option *ngFor="let opEva of OpEva" value="1">{{opEva}}</option></select>
 									</div>
 									<div class="input-group">
-										<input type="text" class="form-control" id="Eva" aria-describedby= "basic-addon1" placeholder="Evaluación" />
-										<select class="custom-select" id="Eva"><option selected="">Escoger...</option></select>
+										<select class="custom-select" id="Eva"><option selected="">Escoger...</option><<option *ngFor="let opEva of OpEva" value="1">{{opEva}}</option></select>
 									</div>
 									<div class="input-group">
-										<input type="text" class="form-control" id="Eva" aria-describedby= "basic-addon1" placeholder="Evaluación" />
-										<select class="custom-select" id="Eva"><option selected="">Escoger...</option></select>
+										<select class="custom-select" id="Eva"><option selected="">Escoger...</option><<option *ngFor="let opEva of OpEva" value="1">{{opEva}}</option></select>
 									</div>
 								</div>
 							</form>
@@ -796,4 +787,4 @@
 				</div>
 			</div>
 		</div>
-	</main>
+</main>
