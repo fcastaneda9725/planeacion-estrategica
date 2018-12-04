@@ -1,0 +1,790 @@
+<header>
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1"><span class="navbar-toggler-icon" aria-controls="navbar1" aria-expanded="false" aria-label="Toggle navigation"></span></button>
+            <div class="collapse navbar-collapse" id="navbar1">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a routerLink='/perfil_usuario' class="navbar-brand"><span><img src="assets/svg/si-glyph-person-2.svg" id="perfil" /><span class="sr-only" id="texto"> Perfil de Usuario</span></span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink='/menu'><strong>Home</strong><span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><strong>Features</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><strong>Pricing</strong></a>
+                    </li>
+                </ul>
+                <form class= "form-inline navbar-form navbar-right">
+                    <a routerLink='/login'><button class= "bt btn btn-outline-success" type= "button" ><span><strong>Cerrar Sesion</strong></span></button></a>
+                </form>
+                <div class="divider"></div>
+            </div>
+  </nav>
+</header>
+<main>
+		<div class="container-fluid">
+			<div class="row justify-content-md-center">
+				<div class="jumbotron medio col-md-12">
+					<div class="row caja1">
+						<div class="row col-md-12">
+							<div class= "card col-md-12 encabezado" >
+					            <div class= "card-header medio" >
+					                <div class="row">
+					                    <div class="text-left col-md-4">
+					                        <img class="card-img minilogo" src="assets/h1.png" alt="Icono Gobierno Edomex">
+					                    </div>
+					                    <div style="margin-top: 54px; font-size: 20px; font-family: Arial;" class=" col-md-4">
+					                    		<h4 class="card-title"><strong>Planeación Estratégica</strong></h4>
+					                    </div>
+					                    <div class="text-right col-md-4">
+					                        <img class="card-img cecicon" src="assets/cecytem.jpg" alt="Logo cecytem">
+					                    </div>
+					                </div>
+					            </div>
+					            <div class="row separador">
+					                <div class= "card-body text-center texto1" >
+					                    <h3 class=" card-tittle">A)DATOS DE IDENTIFICACIÓN </h3>
+					                </div>
+					            </div>
+				        	</div>
+						</div>
+						<div class="row col-md-12">
+							<form action="" class="form-horizontal col-md-12">
+								<div class="form-group">
+									<label for="instituciones" class="sr-only control-label">Nombre de Institución:</label>
+									<div class="input-group">
+										<div class="input-group-prepend">
+											<span class="input-group-text">Nombre de Institución:</span>
+										</div>
+										<select class="custom-select" id="instituciones"><option selected="">Instituciones...</option><option *ngFor="let opins of Opins" value="1">{{opins}}</option></select>
+									</div>
+								</div>
+							</form>
+							<form action="" class="form-horizontal col-md-12">
+								<div class="form-group">
+									<label for="planteles" class="sr-only  control-label">Plantel:</label>
+									<div class="input-group">
+										<div class="input-group-prepend">
+											<span class="input-group-text">Plantel:</span>
+										</div>
+										<select class="custom-select" id="planteles"><option selected="">Escoger...</option><option *ngFor="let opplan of Opplan">{{opplan}}</option></select>
+									</div>
+								</div>
+							</form>
+							<form action="" class="form-horizontal col-md-6">
+								<div class="form-group">
+									<label for="cct" class="sr-only control-label">CCT:</label>
+									<div class="input-group">
+										<div class="input-group-prepend">
+											<span class="input-group-text">CCT:</span>
+										</div>
+										<select class="custom-select" id="cct"><option selected="">Claves...</option><option *ngFor="let opcct of Opcct" value="1">{{opcct}}</option></select>
+									</div>
+								</div>
+							</form>
+							<form action="" class="form-horizontal col-md-6">
+								<div class="form-group">
+									<label for="docente" class="sr-only control-label">Docente:</label>
+									<div class="input-group">
+										<div class="input-group-prepend">
+											<span class="input-group-text">Docente:</span>
+										</div>
+										<select class="custom-select" ></select>
+									</div>
+								</div>
+							</form>
+							<form action="" class="form-horizontal col-md-4">
+								<div class="form-group">
+									<label for="Asignatura" class="sr-only control-label">Asignatura:</label>
+									<div class="input-group">
+										<div class="input-group-prepend">
+											<span class="input-group-text">Asignatura:</span>
+										</div>
+										<select class="custom-select" id="Asignatura"><option selected="">Asignaturas...</option><option *ngFor="let opasig of Opasig" value="1">{{opasig}}</option></select>
+									</div>
+									<label for="Modulo" class="sr-only control-label">Modulo:</label>
+									<div class="input-group">
+										<div class="input-group-prepend">
+											<span class="input-group-text">Modulo:</span>
+										</div>
+										<input type="text" class="form-control" id="Modulo" placeholder="Modulo" aria-label="Amount"/>
+									</div>
+								</div>
+							</form>
+							<form action="" class="form-horizontal col-md-2">
+								<div class="form-group">
+									<label for="Especialidad" class="control-label">Especialidad:</label>
+									<div class="input-group">
+										<input type="text" class="form-control" id="Especialidad" placeholder="Especialidad"/>
+									</div>
+								</div>
+							</form>
+							<form action="" class="form-horizontal col-md-2">
+								<div class="form-group">
+									<label for="Semestre" class="control-label">Semestre:</label>
+									<div class="input-group">
+										<select class="custom-select" id="Semestre"><option selected="">Semestres...</option><option *ngFor="let opsem of Opsem" value="1">{{opsem}}</option></select>
+									</div>
+								</div>
+							</form>
+							<form action="" class="form-horizontal col-md-2">
+								<div class="form-group">
+									<label for="parcial" class="control-label">Número de parcial:</label>
+									<div class="input-group">
+										<input type="text" class="form-control" id="parcial" placeholder="Número de parcial"/>
+									</div>
+								</div>
+							</form>
+							<form action="" class="form-horizontal col-md-2">
+								<div class="form-group">
+									<label for="planeación" class="control-label">Número de planeación:</label>
+									<div class="input-group">
+										<input type="text" class="form-control" id="planeación" placeholder="Número de planeación:"/>
+									</div>
+								</div>
+							</form>
+							<form action="" class="form-horizontal col-md-6">
+								<div class="form-group">
+									<label for="Titulo" class="sr-only control-label">Titulo de la Planeación Estratégica:</label>
+									<div class="input-group">
+										<div class="input-group-prepend">
+											<span class="input-group-text">Titulo de la Planeación Estratégica:</span>
+										</div>
+										<input type="text" class="form-control" id="Titulo" placeholder="Titulo de la Planeación Estratégica"/>
+									</div>
+								</div>
+							</form>
+							<form action="" class="form-horizontal col-md-6">
+								<div class="form-group">
+									<label for="porcentaje" class="sr-only control-label">% de la PE en la evaluación formativa del parcial:</label>
+									<div class="input-group">
+										<div class="input-group-prepend">
+											<span class="input-group-text">% de la PE en la evaluación formativa del parcial:</span>
+										</div>
+										<input type="text" class="form-control" id="porcentaje" placeholder="% de la PE"/>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="row caja1">
+						<div class="row col-md-12">
+							<div class= "card col-md-12 encabezado" >
+					            <div class="row separador">
+					                <div class= "card-body text-center texto1" >
+					                    <h3 class=" card-tittle">B)INTENCIONES FORMATIVAS </h3>
+					                </div>
+					            </div>
+				        	</div>
+						</div>
+						<div class="row col-md-12">
+							<form action="" class="form-horizontal col-md-12">
+								<div class="form-group">
+									<label for="Proposito" class="sr-only control-label">Proposito de la Planeación Estratégica:</label>
+									<div class="input-group">
+										<div class="input-group-prepend">
+											<span class="input-group-text">Proposito de la Planeación Estratégica:</span>
+										</div>
+										<input type="text" class="form-control" id="Proposito" aria-describedby= "basic-addon1" placeholder="Proposito de la PE" />
+									</div>
+								</div>
+							</form>
+							<form action="" class="form-horizontal col-md-6">
+								<div class="form-group">
+									<label for="Eje" class="sr-only  control-label">Eje:</label>
+									<div class="input-group">
+										<div class="input-group-prepend">
+											<span class="input-group-text">Eje:</span>
+										</div>
+										<select class="custom-select" id="Eje"><option selected="">Escoger...</option><<option *ngFor="let opeje of Opeje" value="1">{{opeje}}</option></select>
+									</div>
+								</div>
+							</form>
+							<form action="" class="form-horizontal col-md-6">
+								<div class="form-group">
+									<label for="Componentes" class="sr-only control-label">Componentes:</label>
+									<div class="input-group">
+										<div class="input-group-prepend">
+											<span class="input-group-text">Componentes:</span>
+										</div>
+										<select class="custom-select" id="Componentes"><option selected="">Escoger...</option><<option *ngFor="let opcom of Opcom" value="1">{{opcom}}</option></select>
+									</div>
+								</div>
+							</form>
+							<form action="" class="form-horizontal col-md-12">
+								<div class="form-group">
+									<label for="Cc" class="sr-only control-label">Contenido central:</label>
+									<div class="input-group">
+										<div class="input-group-prepend">
+											<span class="input-group-text">Contenido central:</span>
+										</div>
+										<select class="custom-select" id="Cc"><option selected="">Escoger...</option><<option *ngFor="let opCc of OpCc" value="1">{{opCc}}</option></select>
+									</div>
+								</div>
+							</form>
+							<form action="" class="form-horizontal col-md-6">
+								<div class="form-group">
+									<label for="Ce" class="sr-only  control-label">Contenidos específicos:</label>
+									<div class="input-group">
+										<div class="input-group-prepend">
+											<span class="input-group-text">Contenidos específicos:</span>
+										</div>
+										<select class="custom-select" id="Ce"><option selected="">Escoger...</option><<option *ngFor="let opCe of OpCe" value="1">{{OpCe}}</option></select>
+									</div>
+								</div>
+							</form>
+							<form action="" class="form-horizontal col-md-6">
+								<div class="form-group">
+									<label for="Ae" class="sr-only control-label">Aprendizajes esperados:</label>
+									<div class="input-group">
+										<div class="input-group-prepend">
+											<span class="input-group-text">Aprendizajes esperados:</span>
+										</div>
+										<input type="text" class="form-control" id="Ae" placeholder="Aprendizajes esperados"/>
+									</div>
+								</div>
+							</form>
+							<form action="" class="form-horizontal col-md-12">
+								<div class="form-group">
+									<label for="Pe" class="sr-only control-label">Productos esperados:</label>
+									<div class="input-group">
+										<div class="input-group-prepend">
+											<span class="input-group-text">Productos esperados:</span>
+										</div>
+										<select class="custom-select" id="Pe"><option selected="">Escoger...</option><<option *ngFor="let opPE of OpPe" value="1">{{opPe}}</option></select>
+									</div>
+								</div>
+							</form>
+							<form action="" class="form-horizontal col-md-12">
+								<div class="form-group">
+									<label for="Cga" class="sr-only control-label">Competencias genéricas y atributos:</label>
+									<div class="input-group">
+										<div class="input-group-prepend">
+											<span class="input-group-text">Competencias genéricas y atributos:</span>
+										</div>
+										<select class="custom-select" id="Cga"><option selected="">Escoger...</option><<option *ngFor="let opCga of OpCga" value="1">{{opCga}}</option></select>
+									</div>
+								</div>
+							</form>
+							<form action="" class="form-horizontal col-md-12">
+								<div class="form-group">
+									<label for="Cd" class="sr-only control-label">Competencias disciplinares:</label>
+									<div class="input-group">
+										<div class="input-group-prepend">
+											<span class="input-group-text">Competencias disciplinares:</span>
+										</div>
+										<select class="custom-select" id="Cd"><option selected="">Escoger...</option><<option *ngFor="let opCd of OpCd" value="1">{{opCd}}</option></select>
+									</div>
+								</div>
+							</form>
+							<form action="" class="form-horizontal col-md-12">
+								<div class="form-group">
+									<label for="Cp" class="sr-only control-label">Competencias profesionales:</label>
+									<div class="input-group">
+										<div class="input-group-prepend">
+											<span class="input-group-text">Competencias profesionales:</span>
+										</div>
+										<select class="custom-select" id="Cp"><option selected="">Escoger...</option><<option *ngFor="let opCp of OpCp" value="1">{{opCp}}</option></select>
+									</div>
+								</div>
+							</form>
+							<form action="" class="form-horizontal col-md-12">
+								<div class="form-group">
+									<label for="Hs" class="sr-only control-label">Habilidades socioemocionales:</label>
+									<div class="input-group">
+										<div class="input-group-prepend">
+											<span class="input-group-text">Habilidades socioemocionales:</span>
+										</div>
+										<input type="text" class="form-control" id="Hs" aria-describedby= "basic-addon1" placeholder="Habilidades socioemocionales" />
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="row caja1">
+						<div class="row col-md-12">
+							<div class= "card col-md-12 encabezado" >
+					            <div class="row separador">
+					                <div class= "card-body text-center" >
+					                    <h3 class=" card-title">C)	ACTIVIDADES DE APRENDIZAJE  </h3>
+					                </div>
+					            </div>
+				        	</div>
+						</div>
+						<div class="row col-md-12">
+							<div class= "card col-md-12 encabezado" >
+					            <div class="row subtitulo">
+					                <div class= "card-body text-center" >
+					                    <h5 class=" card-subtitle">Apertura</h5>
+					                </div>
+					            </div>
+				        	</div>
+						</div>
+						<div class="row col-md-12 clearfix">
+							<form action="" class="form-horizontal col-md-2">
+								<div class="form-group">
+									<label for="NtM" class="control-label">Nivel<br>taxonómico<br>de<br>Marzano:</label>
+									<div class="input-group">
+										<select class="custom-select" id="NtM"><option selected="">Escoger...</option><option *ngFor="let opNtM of OpNtM" value="1">{{opNtM}}</option></select>
+									</div>
+									<div class="input-group">
+										<select class="custom-select" id="NtM"><option selected="">Escoger...</option><option *ngFor="let opNtM of OpNtM" value="1">{{opNtM}}</option></select>
+									</div>
+									<div class="input-group">
+										<select class="custom-select" id="NtM"><option selected="">Escoger...</option><option *ngFor="let opNtM of OpNtM" value="1">{{opNtM}}</option></select>
+									</div>
+								</div>
+							</form>
+							<form style="margin-top: 71px; width: 100%;" action="" class="form-horizontal col-md-2">
+								<div class="form-group">
+									<label for="actividades" class="control-label">Actividades:</label>
+									<div class="input-group">
+										<input type="text" class="form-control" id="actividades" placeholder="Actividades"/>
+									</div>
+									<div class="input-group">
+										<input type="text" class="form-control" id="actividades" placeholder="Actividades"/>
+									</div>
+									<div class="input-group">
+										<input type="text" class="form-control" id="actividades" placeholder="Actividades"/>
+									</div>
+								</div>
+							</form>
+							<form  style="margin-top: 71px;" action="" class="form-horizontal col-md-4">
+								<div class="form-group">
+									<div class="col-md-12">
+										<label for="opc" class="control-label">Competencias:</label>
+									</div>
+									<div class="input-group">
+										<input type="text" class="form-control" id="genéricas" placeholder="Genérica(s) y sus atributo(s)"/>
+										<input type="text" class="form-control" id="DP" placeholder="Disciplinar(es)/Profesional(es)">
+									</div>
+									<div class="input-group">
+										<input type="text" class="form-control" id="genéricas" placeholder="Genérica(s) y sus atributo(s)"/>
+										<input type="text" class="form-control" id="DP" placeholder="Disciplinar(es)/Profesional(es)">
+									</div>
+									<div class="input-group">
+										<input type="text" class="form-control" id="genéricas" placeholder="Genérica(s) y sus atributo(s)"/>
+										<input type="text" class="form-control" id="DP" placeholder="Disciplinar(es)/Profesional(es)">
+									</div>
+								</div>
+							</form>
+							<form style="margin-top: 46px;" action="" class="form-horizontal col-md-2">
+								<div class="form-group">
+									<label for="Pa" class="control-label">Producto(s) de Aprendizaje:</label>
+									<div class="input-group">
+										<input type="text" class="form-control" id="Pa" placeholder="Producto(s)"/>
+									</div>
+									<div class="input-group">
+										<input type="text" class="form-control" id="Pa" placeholder="Producto(s)"/>
+									</div>
+									<div class="input-group">
+										<input type="text" class="form-control" id="Pa" placeholder="Producto(s)"/>
+									</div>
+								</div>
+							</form>
+							<form style="margin-top: 71px;" action="" class="form-horizontal col-md-2">
+								<div class="form-group">
+									<label for="Eva" class="control-label">Evaluación:</label>
+									<div class="input-group">
+										<select class="custom-select" id="Eva"><option selected="">Escoger...</option><<option *ngFor="let opEva of OpEva" value="1">{{opEva}}</option></select>
+									</div>
+									<div class="input-group">
+										<select class="custom-select" id="Eva"><option selected="">Escoger...</option><<option *ngFor="let opEva of OpEva" value="1">{{opEva}}</option></select>
+									</div>
+									<div class="input-group">
+										<select class="custom-select" id="Eva"><option selected="">Escoger...</option><<option *ngFor="let opEva of OpEva" value="1">{{opEva}}</option></select>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="row col-md-12">
+							<div class= "card col-md-12 encabezado" >
+					            <div class="row subtitulo">
+					                <div class= "card-body text-center" >
+					                    <h5 class=" card-subtitle">Desarrollo</h5>
+					                </div>
+					            </div>
+				        	</div>
+						</div>
+            <div class="row col-md-12 clearfix">
+							<form action="" class="form-horizontal col-md-2">
+								<div class="form-group">
+									<label for="NtM" class="control-label">Nivel<br>taxonómico<br>de<br>Marzano:</label>
+									<div class="input-group">
+										<select class="custom-select" id="NtM"><option selected="">Escoger...</option><option *ngFor="let opNtM of OpNtM" value="1">{{opNtM}}</option></select>
+									</div>
+									<div class="input-group">
+										<select class="custom-select" id="NtM"><option selected="">Escoger...</option><option *ngFor="let opNtM of OpNtM" value="1">{{opNtM}}</option></select>
+									</div>
+									<div class="input-group">
+										<select class="custom-select" id="NtM"><option selected="">Escoger...</option><option *ngFor="let opNtM of OpNtM" value="1">{{opNtM}}</option></select>
+									</div>
+								</div>
+							</form>
+							<form style="margin-top: 71px; width: 100%;" action="" class="form-horizontal col-md-2">
+								<div class="form-group">
+									<label for="actividades" class="control-label">Actividades:</label>
+									<div class="input-group">
+										<input type="text" class="form-control" id="actividades" placeholder="Actividades"/>
+									</div>
+									<div class="input-group">
+										<input type="text" class="form-control" id="actividades" placeholder="Actividades"/>
+									</div>
+									<div class="input-group">
+										<input type="text" class="form-control" id="actividades" placeholder="Actividades"/>
+									</div>
+								</div>
+							</form>
+							<form  style="margin-top: 71px;" action="" class="form-horizontal col-md-4">
+								<div class="form-group">
+									<div class="col-md-12">
+										<label for="opc" class="control-label">Competencias:</label>
+									</div>
+									<div class="input-group">
+										<input type="text" class="form-control" id="genéricas" placeholder="Genérica(s) y sus atributo(s)"/>
+										<input type="text" class="form-control" id="DP" placeholder="Disciplinar(es)/Profesional(es)">
+									</div>
+									<div class="input-group">
+										<input type="text" class="form-control" id="genéricas" placeholder="Genérica(s) y sus atributo(s)"/>
+										<input type="text" class="form-control" id="DP" placeholder="Disciplinar(es)/Profesional(es)">
+									</div>
+									<div class="input-group">
+										<input type="text" class="form-control" id="genéricas" placeholder="Genérica(s) y sus atributo(s)"/>
+										<input type="text" class="form-control" id="DP" placeholder="Disciplinar(es)/Profesional(es)">
+									</div>
+								</div>
+							</form>
+							<form style="margin-top: 46px;" action="" class="form-horizontal col-md-2">
+								<div class="form-group">
+									<label for="Pa" class="control-label">Producto(s) de Aprendizaje:</label>
+									<div class="input-group">
+										<input type="text" class="form-control" id="Pa" placeholder="Producto(s)"/>
+									</div>
+									<div class="input-group">
+										<input type="text" class="form-control" id="Pa" placeholder="Producto(s)"/>
+									</div>
+									<div class="input-group">
+										<input type="text" class="form-control" id="Pa" placeholder="Producto(s)"/>
+									</div>
+								</div>
+							</form>
+							<form style="margin-top: 71px;" action="" class="form-horizontal col-md-2">
+								<div class="form-group">
+									<label for="Eva" class="control-label">Evaluación:</label>
+									<div class="input-group">
+										<select class="custom-select" id="Eva"><option selected="">Escoger...</option><<option *ngFor="let opEva of OpEva" value="1">{{opEva}}</option></select>
+									</div>
+									<div class="input-group">
+										<select class="custom-select" id="Eva"><option selected="">Escoger...</option><<option *ngFor="let opEva of OpEva" value="1">{{opEva}}</option></select>
+									</div>
+									<div class="input-group">
+										<select class="custom-select" id="Eva"><option selected="">Escoger...</option><<option *ngFor="let opEva of OpEva" value="1">{{opEva}}</option></select>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="row col-md-12">
+							<div class= "card col-md-12 encabezado" >
+					            <div class="row subtitulo">
+					                <div class= "card-body text-center" >
+					                    <h5 class=" card-subtitle">Cierre</h5>
+					                </div>
+					            </div>
+				        	</div>
+						</div>
+            <div class="row col-md-12 clearfix">
+							<form action="" class="form-horizontal col-md-2">
+								<div class="form-group">
+									<label for="NtM" class="control-label">Nivel<br>taxonómico<br>de<br>Marzano:</label>
+									<div class="input-group">
+										<select class="custom-select" id="NtM"><option selected="">Escoger...</option><option *ngFor="let opNtM of OpNtM" value="1">{{opNtM}}</option></select>
+									</div>
+									<div class="input-group">
+										<select class="custom-select" id="NtM"><option selected="">Escoger...</option><option *ngFor="let opNtM of OpNtM" value="1">{{opNtM}}</option></select>
+									</div>
+									<div class="input-group">
+										<select class="custom-select" id="NtM"><option selected="">Escoger...</option><option *ngFor="let opNtM of OpNtM" value="1">{{opNtM}}</option></select>
+									</div>
+								</div>
+							</form>
+							<form style="margin-top: 71px; width: 100%;" action="" class="form-horizontal col-md-2">
+								<div class="form-group">
+									<label for="actividades" class="control-label">Actividades:</label>
+									<div class="input-group">
+										<input type="text" class="form-control" id="actividades" placeholder="Actividades"/>
+									</div>
+									<div class="input-group">
+										<input type="text" class="form-control" id="actividades" placeholder="Actividades"/>
+									</div>
+									<div class="input-group">
+										<input type="text" class="form-control" id="actividades" placeholder="Actividades"/>
+									</div>
+								</div>
+							</form>
+							<form  style="margin-top: 71px;" action="" class="form-horizontal col-md-4">
+								<div class="form-group">
+									<div class="col-md-12">
+										<label for="opc" class="control-label">Competencias:</label>
+									</div>
+									<div class="input-group">
+										<input type="text" class="form-control" id="genéricas" placeholder="Genérica(s) y sus atributo(s)"/>
+										<input type="text" class="form-control" id="DP" placeholder="Disciplinar(es)/Profesional(es)">
+									</div>
+									<div class="input-group">
+										<input type="text" class="form-control" id="genéricas" placeholder="Genérica(s) y sus atributo(s)"/>
+										<input type="text" class="form-control" id="DP" placeholder="Disciplinar(es)/Profesional(es)">
+									</div>
+									<div class="input-group">
+										<input type="text" class="form-control" id="genéricas" placeholder="Genérica(s) y sus atributo(s)"/>
+										<input type="text" class="form-control" id="DP" placeholder="Disciplinar(es)/Profesional(es)">
+									</div>
+								</div>
+							</form>
+							<form style="margin-top: 46px;" action="" class="form-horizontal col-md-2">
+								<div class="form-group">
+									<label for="Pa" class="control-label">Producto(s) de Aprendizaje:</label>
+									<div class="input-group">
+										<input type="text" class="form-control" id="Pa" placeholder="Producto(s)"/>
+									</div>
+									<div class="input-group">
+										<input type="text" class="form-control" id="Pa" placeholder="Producto(s)"/>
+									</div>
+									<div class="input-group">
+										<input type="text" class="form-control" id="Pa" placeholder="Producto(s)"/>
+									</div>
+								</div>
+							</form>
+							<form style="margin-top: 71px;" action="" class="form-horizontal col-md-2">
+								<div class="form-group">
+									<label for="Eva" class="control-label">Evaluación:</label>
+									<div class="input-group">
+										<select class="custom-select" id="Eva"><option selected="">Escoger...</option><<option *ngFor="let opEva of OpEva" value="1">{{opEva}}</option></select>
+									</div>
+									<div class="input-group">
+										<select class="custom-select" id="Eva"><option selected="">Escoger...</option><<option *ngFor="let opEva of OpEva" value="1">{{opEva}}</option></select>
+									</div>
+									<div class="input-group">
+										<select class="custom-select" id="Eva"><option selected="">Escoger...</option><<option *ngFor="let opEva of OpEva" value="1">{{opEva}}</option></select>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="row caja1">
+						<div class="row col-md-12">
+							<div class= "card col-md-12 encabezado" >
+					            <div class="row separador">
+					                <div class= "card-body text-center" >
+					                    <h3 class=" card-title">D)	RECURSOS</h3>
+					                </div>
+					            </div>
+				        	</div>
+						</div>
+						<div class="row col-md-12 clearfix">
+							<form action="" class="form-horizontal col-md-3">
+								<div class="form-group">
+									<label for="Equipo" class="control-label">Equipo:</label>
+									<div class="input-group">
+										<input type="text" class="form-control" id="Equipo" placeholder="Equipo"/>
+									</div>
+									<div class="input-group">
+										<input type="text" class="form-control" id="Equipo" placeholder="Equipo"/>
+									</div>
+									<div class="input-group">
+										<input type="text" class="form-control" id="Equipo" placeholder="Equipo"/>
+									</div>
+								</div>
+							</form>
+							<form  action="" class="form-horizontal col-md-3">
+								<div class="form-group">
+									<div class="col-md-12">
+										<label for="Material" class="control-label">Material:</label>
+									</div>
+									<div class="input-group">
+										<input type="text" class="form-control" id="Material" placeholder="Material"/>
+									</div>
+									<div class="input-group">
+										<input type="text" class="form-control" id="Material" placeholder="Material"/>
+									</div>
+									<div class="input-group">
+										<input type="text" class="form-control" id="Material" placeholder="Material"/>
+									</div>
+								</div>
+							</form>
+							<form action="" class="form-horizontal col-md-2">
+								<div class="form-group">
+									<label for="Ef" class="control-label">Espacios físicos:</label>
+									<div class="input-group">
+										<input type="text" class="form-control" id="Ef" placeholder="Espacios físicos"/>
+									</div>
+									<div class="input-group">
+										<input type="text" class="form-control" id="Ef" placeholder="Espacios físicos"/>
+									</div>
+									<div class="input-group">
+										<input type="text" class="form-control" id="Ef" placeholder="Espacios físicos"/>
+									</div>
+								</div>
+							</form>
+							<form action="" class="form-horizontal col-md-4">
+								<div class="form-group">
+									<label for="FI" class="control-label">Fuentes de Información:</label>
+									<div class="input-group">
+										<input type="text" class="form-control" id="FI" aria-describedby= "basic-addon1" placeholder="Fuentes de Información" />
+									</div>
+									<div class="input-group">
+										<input type="text" class="form-control" id="FI" aria-describedby= "basic-addon1" placeholder="Fuentes de Información" />
+									</div>
+									<div class="input-group">
+										<input type="text" class="form-control" id="FI" aria-describedby= "basic-addon1" placeholder="Fuentes de Información" />
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="row caja1">
+						<div class="row col-md-12">
+							<div class= "card col-md-12 encabezado" >
+					            <div class="row separador">
+					                <div class= "card-body text-center" >
+					                    <h3 class=" card-title">E) INSTRUMENTOS</h3>
+					                </div>
+					            </div>
+				        	</div>
+						</div>
+						<div class="row col-md-12 clearfix">
+							<form style="margin-top: 24px;" action="" class="form-horizontal col-md-2">
+								<div class="form-group">
+									<label for="NA" class="control-label">No. de Anexo:</label>
+									<div class="input-group">
+										<input type="text" class="form-control" id="NA" placeholder="No. de Anexo"/>
+									</div>
+									<div class="input-group">
+										<input type="text" class="form-control" id="NA" placeholder="No. de Anexo"/>
+									</div>
+									<div class="input-group">
+										<input type="text" class="form-control" id="NA" placeholder="No. de Anexo"/>
+									</div>
+								</div>
+							</form>
+							<form style="margin-top: 24px; " action="" class="form-horizontal col-md-3">
+								<div class="form-group">
+									<div class="col-md-12">
+										<label for="Instrumento" class="control-label">Instrumento:</label>
+									</div>
+									<div class="input-group">
+										<input type="text" class="form-control" id="Instrumento" placeholder="Instrumento"/>
+									</div>
+									<div class="input-group">
+										<input type="text" class="form-control" id="Instrumento" placeholder="Instrumento"/>
+									</div>
+									<div class="input-group">
+										<input type="text" class="form-control" id="Instrumento" placeholder="Instrumento"/>
+									</div>
+								</div>
+							</form>
+							<form style="margin-top: 24px;" action="" class="form-horizontal col-md-3">
+								<div class="form-group">
+									<label for="Tit" class="control-label">Titulo:</label>
+									<div class="input-group">
+										<input type="text" class="form-control" id="Tit" placeholder="Titulo"/>
+									</div>
+									<div class="input-group">
+										<input type="text" class="form-control" id="Tit" placeholder="Titulo"/>
+									</div>
+									<div class="input-group">
+										<input type="text" class="form-control" id="Tit" placeholder="Titulo"/>
+									</div>
+								</div>
+							</form>
+							<form  action="" class="form-horizontal col-md-4">
+								<div class="form-group">
+									<label for="PorEva" class="control-label">Porcentaje de la evaluación que se obtiene con cada instrumento:</label>
+									<div class="input-group">
+										<input type="text" class="form-control" id="PorEva" aria-describedby= "basic-addon1" placeholder="Porcentaje obtenido" />
+									</div>
+									<div class="input-group">
+										<input type="text" class="form-control" id="PorEva" aria-describedby= "basic-addon1" placeholder="Porcentaje obtenido" />
+									</div>
+									<div class="input-group">
+										<input type="text" class="form-control" id="PorEva" aria-describedby= "basic-addon1" placeholder="Porcentaje obtenido" />
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="row caja1">
+						<div class="row col-md-12">
+							<div class= "card col-md-12 encabezado" >
+					            <div class="row separador">
+					                <div class= "card-body text-center" >
+					                    <h3 class=" card-title">F) RÚBRICAS</h3>
+					                </div>
+					            </div>
+				        	</div>
+						</div>
+						<div class="row col-md-12 clearfix">
+							<form action="" class="form-horizontal col-md-2">
+								<div class="form-group">
+									<label for="NA" class="control-label">Realizó:</label>
+									<div class="input-group">
+										<textarea class="form-control"></textarea>
+									</div>
+								</div>
+							</form>
+							<form action="" class="form-horizontal col-md-3">
+								<div class="form-group">
+									<div class="col-md-12">
+										<label for="Instrumento" class="control-label">Revision técnica-pedagógica:</label>
+									</div>
+									<div class="input-group">
+										<textarea class="form-control"></textarea>
+									</div>
+								</div>
+							</form>
+							<form  action="" class="form-horizontal col-md-3">
+								<div class="form-group">
+									<label for="Tit" class="control-label">Revisión de pertenecia escolar:</label>
+									<div class="input-group">
+										<textarea class="form-control"></textarea>
+									</div>
+								</div>
+							</form>
+							<form  action="" class="form-horizontal col-md-4">
+								<div class="form-group">
+									<label for="PorEva" class="control-label">Sello escolar:</label>
+									<div class="input-group">
+										<textarea class="form-control"></textarea>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="row botones">
+						<form action="" class="form-horizontal col-md-4">
+							<div class="">
+								<div class="">
+									<a routerLink='/menu'><button class="boton btn btn-lg" type="button" name="button">Guardar</button></a>
+								</div>
+							</div>
+						</form>
+						<form action="" class="form-horizontal col-md-4">
+							<div class="">
+								<div class="">
+									<a routerLink='/menu'><button class="boton btn btn-lg" type="button" name="button">Mandar<br>a<br>verificar</button></a>
+								</div>
+							</div>
+						</form>
+						<form action="" class="form-horizontal col-md-4">
+							<div class="">
+								<div class="">
+									<a routerLink='/menu'><button class="boton btn btn-lg" type="button" name="button2">Cancelar</button></a>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+</main>
