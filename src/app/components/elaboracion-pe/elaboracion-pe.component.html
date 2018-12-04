@@ -3,10 +3,10 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1"><span class="navbar-toggler-icon" aria-controls="navbar1" aria-expanded="false" aria-label="Toggle navigation"></span></button>
             <div class="collapse navbar-collapse" id="navbar1">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a routerLink='/perfil_usuario' class="navbar-brand"><span><img src="assets/svg/si-glyph-person-2.svg" id="perfil" /><span class="sr-only" id="texto"> Perfil de Usuario</span></span></a>
-                    </li>
                     <li class="nav-item">
+                        <a routerLink='user/perfil-usuario' class="navbar-brand"><span><img src="assets/svg/si-glyph-person-2.svg" id="perfil" /><span class="sr-only" id="texto"> Perfil de Usuario</span></span></a>
+                    </li>
+                    <li class="nav-item active">
                         <a class="nav-link" routerLink='/menu'><strong>Home</strong><span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
@@ -17,11 +17,11 @@
                     </li>
                 </ul>
                 <form class= "form-inline navbar-form navbar-right">
-                    <a routerLink='/login'><button class= "bt btn btn-outline-success" type= "button" ><span><strong>Cerrar Sesion</strong></span></button></a>
+                    <a routerLink='user/login'><button class= "bt btn btn-outline-success" type= "button" ><span><strong>Cerrar Sesion</strong></span></button></a>
                 </form>
                 <div class="divider"></div>
             </div>
-        </nav>
+  </nav>
 </header>
 <main>
 		<div class="container-fluid">
@@ -51,58 +51,58 @@
 				        	</div>
 						</div>
 						<div class="row col-md-12">
-							<form  action="" class="form-horizontal col-md-12">
+							<form action="" class="form-horizontal col-md-12">
 								<div class="form-group">
-									<label for="Institución" class="sr-only control-label">Nombre de Institución:</label>
+									<label for="instituciones" class="sr-only control-label">Nombre de Institución:</label>
 									<div class="input-group">
 										<div class="input-group-prepend">
 											<span class="input-group-text">Nombre de Institución:</span>
 										</div>
-										<input type="text" class="form-control" id="Institución" aria-describedby= "basic-addon1" placeholder="Institución" />
+										<select class="custom-select" id="instituciones"><option selected="">Instituciones...</option><option *ngFor="let opins of Opins" value="1">{{opins}}</option></select>
 									</div>
 								</div>
 							</form>
-							<form  action="" class="form-horizontal col-md-12">
+							<form action="" class="form-horizontal col-md-12">
 								<div class="form-group">
-									<label for="Plantel" class="sr-only  control-label">Plantel:</label>
+									<label for="planteles" class="sr-only  control-label">Plantel:</label>
 									<div class="input-group">
 										<div class="input-group-prepend">
 											<span class="input-group-text">Plantel:</span>
 										</div>
-										<input type="text" class="form-control" id="Plantel" placeholder="Plantel"/>
+										<select class="custom-select" id="planteles"><option selected="">Escoger...</option><option *ngFor="let opplan of Opplan">{{opplan}}</option></select>
 									</div>
 								</div>
 							</form>
-							<form  action="" class="form-horizontal col-md-6">
+							<form action="" class="form-horizontal col-md-6">
 								<div class="form-group">
 									<label for="cct" class="sr-only control-label">CCT:</label>
 									<div class="input-group">
 										<div class="input-group-prepend">
 											<span class="input-group-text">CCT:</span>
 										</div>
-										<input type="text" class="form-control" id="cct" placeholder="CCT"/>
+										<select class="custom-select" id="cct"><option selected="">Claves...</option><option *ngFor="let opcct of Opcct" value="1">{{opcct}}</option></select>
 									</div>
 								</div>
 							</form>
-							<form  action="" class="form-horizontal col-md-6">
+							<form action="" class="form-horizontal col-md-6">
 								<div class="form-group">
 									<label for="docente" class="sr-only control-label">Docente:</label>
 									<div class="input-group">
 										<div class="input-group-prepend">
 											<span class="input-group-text">Docente:</span>
 										</div>
-										<input type="text" class="form-control" id="docente" placeholder="Docente"/>
+										<select class="custom-select" ></select>
 									</div>
 								</div>
 							</form>
-							<form  action="" class="form-horizontal col-md-4">
+							<form action="" class="form-horizontal col-md-4">
 								<div class="form-group">
 									<label for="Asignatura" class="sr-only control-label">Asignatura:</label>
 									<div class="input-group">
 										<div class="input-group-prepend">
 											<span class="input-group-text">Asignatura:</span>
 										</div>
-										<input type="text" class="form-control" id="Asignatura" placeholder="Asignatura" aria-label="Amount"/>
+										<select class="custom-select" id="Asignatura"><option selected="">Asignaturas...</option><option *ngFor="let opasig of Opasig" value="1">{{opasig}}</option></select>
 									</div>
 									<label for="Modulo" class="sr-only control-label">Modulo:</label>
 									<div class="input-group">
@@ -113,7 +113,7 @@
 									</div>
 								</div>
 							</form>
-							<form  action="" class="form-horizontal col-md-2">
+							<form action="" class="form-horizontal col-md-2">
 								<div class="form-group">
 									<label for="Especialidad" class="control-label">Especialidad:</label>
 									<div class="input-group">
@@ -121,15 +121,15 @@
 									</div>
 								</div>
 							</form>
-							<form  action="" class="form-horizontal col-md-2">
+							<form action="" class="form-horizontal col-md-2">
 								<div class="form-group">
 									<label for="Semestre" class="control-label">Semestre:</label>
 									<div class="input-group">
-										<input type="text" class="form-control" id="Semestre" placeholder="Semestre"/>
+										<select class="custom-select" id="Semestre"><option selected="">Semestres...</option><option *ngFor="let opsem of Opsem" value="1">{{opsem}}</option></select>
 									</div>
 								</div>
 							</form>
-							<form  action="" class="form-horizontal col-md-2">
+							<form action="" class="form-horizontal col-md-2">
 								<div class="form-group">
 									<label for="parcial" class="control-label">Número de parcial:</label>
 									<div class="input-group">
@@ -137,7 +137,7 @@
 									</div>
 								</div>
 							</form>
-							<form  action="" class="form-horizontal col-md-2">
+							<form action="" class="form-horizontal col-md-2">
 								<div class="form-group">
 									<label for="planeación" class="control-label">Número de planeación:</label>
 									<div class="input-group">
@@ -145,7 +145,7 @@
 									</div>
 								</div>
 							</form>
-							<form  action="" class="form-horizontal col-md-6">
+							<form action="" class="form-horizontal col-md-6">
 								<div class="form-group">
 									<label for="Titulo" class="sr-only control-label">Titulo de la Planeación Estratégica:</label>
 									<div class="input-group">
@@ -156,7 +156,7 @@
 									</div>
 								</div>
 							</form>
-							<form  action="" class="form-horizontal col-md-6">
+							<form action="" class="form-horizontal col-md-6">
 								<div class="form-group">
 									<label for="porcentaje" class="sr-only control-label">% de la PE en la evaluación formativa del parcial:</label>
 									<div class="input-group">
@@ -198,7 +198,7 @@
 										<div class="input-group-prepend">
 											<span class="input-group-text">Eje:</span>
 										</div>
-										<input type="text" class="form-control" id="Eje" placeholder="Eje"/>
+										<select class="custom-select" id="Eje"><option selected="">Escoger...</option><<option *ngFor="let opeje of Opeje" value="1">{{opeje}}</option></select>
 									</div>
 								</div>
 							</form>
@@ -209,7 +209,7 @@
 										<div class="input-group-prepend">
 											<span class="input-group-text">Componentes:</span>
 										</div>
-										<input type="text" class="form-control" id="Componentes" placeholder="Componentes"/>
+										<select class="custom-select" id="Componentes"><option selected="">Escoger...</option><<option *ngFor="let opcom of Opcom" value="1">{{opcom}}</option></select>
 									</div>
 								</div>
 							</form>
@@ -220,7 +220,7 @@
 										<div class="input-group-prepend">
 											<span class="input-group-text">Contenido central:</span>
 										</div>
-										<input type="text" class="form-control" id="Cc" aria-describedby= "basic-addon1" placeholder="Contenido central" />
+										<select class="custom-select" id="Cc"><option selected="">Escoger...</option><<option *ngFor="let opCc of OpCc" value="1">{{opCc}}</option></select>
 									</div>
 								</div>
 							</form>
@@ -231,7 +231,7 @@
 										<div class="input-group-prepend">
 											<span class="input-group-text">Contenidos específicos:</span>
 										</div>
-										<input type="text" class="form-control" id="Ce" placeholder="Contenidos específicos"/>
+										<select class="custom-select" id="Ce"><option selected="">Escoger...</option><<option *ngFor="let opCe of OpCe" value="1">{{OpCe}}</option></select>
 									</div>
 								</div>
 							</form>
@@ -253,7 +253,7 @@
 										<div class="input-group-prepend">
 											<span class="input-group-text">Productos esperados:</span>
 										</div>
-										<input type="text" class="form-control" id="Pe" aria-describedby= "basic-addon1" placeholder="Productos esperados" />
+										<select class="custom-select" id="Pe"><option selected="">Escoger...</option><<option *ngFor="let opPE of OpPe" value="1">{{opPe}}</option></select>
 									</div>
 								</div>
 							</form>
@@ -264,7 +264,7 @@
 										<div class="input-group-prepend">
 											<span class="input-group-text">Competencias genéricas y atributos:</span>
 										</div>
-										<input type="text" class="form-control" id="Cga" aria-describedby= "basic-addon1" placeholder="Competencias genéricas y atributos:" />
+										<select class="custom-select" id="Cga"><option selected="">Escoger...</option><<option *ngFor="let opCga of OpCga" value="1">{{opCga}}</option></select>
 									</div>
 								</div>
 							</form>
@@ -275,7 +275,7 @@
 										<div class="input-group-prepend">
 											<span class="input-group-text">Competencias disciplinares:</span>
 										</div>
-										<input type="text" class="form-control" id="Cd" aria-describedby= "basic-addon1" placeholder="Competencias disciplinares:" />
+										<select class="custom-select" id="Cd"><option selected="">Escoger...</option><<option *ngFor="let opCd of OpCd" value="1">{{opCd}}</option></select>
 									</div>
 								</div>
 							</form>
@@ -286,7 +286,7 @@
 										<div class="input-group-prepend">
 											<span class="input-group-text">Competencias profesionales:</span>
 										</div>
-										<input type="text" class="form-control" id="Cp" aria-describedby= "basic-addon1" placeholder="Competencias profesionales:" />
+										<select class="custom-select" id="Cp"><option selected="">Escoger...</option><<option *ngFor="let opCp of OpCp" value="1">{{opCp}}</option></select>
 									</div>
 								</div>
 							</form>
@@ -327,17 +327,17 @@
 								<div class="form-group">
 									<label for="NtM" class="control-label">Nivel<br>taxonómico<br>de<br>Marzano:</label>
 									<div class="input-group">
-										<input type="text" class="form-control" id="NtM" aria-describedby= "basic-addon1" placeholder="Nivel taxonómico" />
+										<select class="custom-select" id="NtM"><option selected="">Escoger...</option><option *ngFor="let opNtM of OpNtM" value="1">{{opNtM}}</option></select>
 									</div>
 									<div class="input-group">
-										<input type="text" class="form-control" id="NtM" aria-describedby= "basic-addon1" placeholder="Nivel taxonómico" />
+										<select class="custom-select" id="NtM"><option selected="">Escoger...</option><option *ngFor="let opNtM of OpNtM" value="1">{{opNtM}}</option></select>
 									</div>
 									<div class="input-group">
-										<input type="text" class="form-control" id="NtM" aria-describedby= "basic-addon1" placeholder="Nivel taxonómico" />
+										<select class="custom-select" id="NtM"><option selected="">Escoger...</option><option *ngFor="let opNtM of OpNtM" value="1">{{opNtM}}</option></select>
 									</div>
 								</div>
 							</form>
-							<form style="margin-top: 71px;" action="" class="form-horizontal col-md-2">
+							<form style="margin-top: 71px; width: 100%;" action="" class="form-horizontal col-md-2">
 								<div class="form-group">
 									<label for="actividades" class="control-label">Actividades:</label>
 									<div class="input-group">
@@ -351,7 +351,7 @@
 									</div>
 								</div>
 							</form>
-							<form style="margin-top: 71px;" action="" class="form-horizontal col-md-4">
+							<form  style="margin-top: 71px;" action="" class="form-horizontal col-md-4">
 								<div class="form-group">
 									<div class="col-md-12">
 										<label for="opc" class="control-label">Competencias:</label>
@@ -388,13 +388,13 @@
 								<div class="form-group">
 									<label for="Eva" class="control-label">Evaluación:</label>
 									<div class="input-group">
-										<input type="text" class="form-control" id="Eva" aria-describedby= "basic-addon1" placeholder="Evaluación" />
+										<select class="custom-select" id="Eva"><option selected="">Escoger...</option><<option *ngFor="let opEva of OpEva" value="1">{{opEva}}</option></select>
 									</div>
 									<div class="input-group">
-										<input type="text" class="form-control" id="Eva" aria-describedby= "basic-addon1" placeholder="Evaluación" />
+										<select class="custom-select" id="Eva"><option selected="">Escoger...</option><<option *ngFor="let opEva of OpEva" value="1">{{opEva}}</option></select>
 									</div>
 									<div class="input-group">
-										<input type="text" class="form-control" id="Eva" aria-describedby= "basic-addon1" placeholder="Evaluación" />
+										<select class="custom-select" id="Eva"><option selected="">Escoger...</option><<option *ngFor="let opEva of OpEva" value="1">{{opEva}}</option></select>
 									</div>
 								</div>
 							</form>
@@ -408,22 +408,22 @@
 					            </div>
 				        	</div>
 						</div>
-						<div class="row col-md-12 clearfix">
+            <div class="row col-md-12 clearfix">
 							<form action="" class="form-horizontal col-md-2">
 								<div class="form-group">
 									<label for="NtM" class="control-label">Nivel<br>taxonómico<br>de<br>Marzano:</label>
 									<div class="input-group">
-										<input type="text" class="form-control" id="NtM" aria-describedby= "basic-addon1" placeholder="Nivel taxonómico" />
+										<select class="custom-select" id="NtM"><option selected="">Escoger...</option><option *ngFor="let opNtM of OpNtM" value="1">{{opNtM}}</option></select>
 									</div>
 									<div class="input-group">
-										<input type="text" class="form-control" id="NtM" aria-describedby= "basic-addon1" placeholder="Nivel taxonómico" />
+										<select class="custom-select" id="NtM"><option selected="">Escoger...</option><option *ngFor="let opNtM of OpNtM" value="1">{{opNtM}}</option></select>
 									</div>
 									<div class="input-group">
-										<input type="text" class="form-control" id="NtM" aria-describedby= "basic-addon1" placeholder="Nivel taxonómico" />
+										<select class="custom-select" id="NtM"><option selected="">Escoger...</option><option *ngFor="let opNtM of OpNtM" value="1">{{opNtM}}</option></select>
 									</div>
 								</div>
 							</form>
-							<form style="margin-top: 71px;" action="" class="form-horizontal col-md-2">
+							<form style="margin-top: 71px; width: 100%;" action="" class="form-horizontal col-md-2">
 								<div class="form-group">
 									<label for="actividades" class="control-label">Actividades:</label>
 									<div class="input-group">
@@ -437,7 +437,7 @@
 									</div>
 								</div>
 							</form>
-							<form style="margin-top: 71px;" action="" class="form-horizontal col-md-4">
+							<form  style="margin-top: 71px;" action="" class="form-horizontal col-md-4">
 								<div class="form-group">
 									<div class="col-md-12">
 										<label for="opc" class="control-label">Competencias:</label>
@@ -474,13 +474,13 @@
 								<div class="form-group">
 									<label for="Eva" class="control-label">Evaluación:</label>
 									<div class="input-group">
-										<input type="text" class="form-control" id="Eva" aria-describedby= "basic-addon1" placeholder="Evaluación" />
+										<select class="custom-select" id="Eva"><option selected="">Escoger...</option><<option *ngFor="let opEva of OpEva" value="1">{{opEva}}</option></select>
 									</div>
 									<div class="input-group">
-										<input type="text" class="form-control" id="Eva" aria-describedby= "basic-addon1" placeholder="Evaluación" />
+										<select class="custom-select" id="Eva"><option selected="">Escoger...</option><<option *ngFor="let opEva of OpEva" value="1">{{opEva}}</option></select>
 									</div>
 									<div class="input-group">
-										<input type="text" class="form-control" id="Eva" aria-describedby= "basic-addon1" placeholder="Evaluación" />
+										<select class="custom-select" id="Eva"><option selected="">Escoger...</option><<option *ngFor="let opEva of OpEva" value="1">{{opEva}}</option></select>
 									</div>
 								</div>
 							</form>
@@ -494,22 +494,22 @@
 					            </div>
 				        	</div>
 						</div>
-						<div class="row col-md-12 clearfix">
+            <div class="row col-md-12 clearfix">
 							<form action="" class="form-horizontal col-md-2">
 								<div class="form-group">
 									<label for="NtM" class="control-label">Nivel<br>taxonómico<br>de<br>Marzano:</label>
 									<div class="input-group">
-										<input type="text" class="form-control" id="NtM" aria-describedby= "basic-addon1" placeholder="Nivel taxonómico" />
+										<select class="custom-select" id="NtM"><option selected="">Escoger...</option><option *ngFor="let opNtM of OpNtM" value="1">{{opNtM}}</option></select>
 									</div>
 									<div class="input-group">
-										<input type="text" class="form-control" id="NtM" aria-describedby= "basic-addon1" placeholder="Nivel taxonómico" />
+										<select class="custom-select" id="NtM"><option selected="">Escoger...</option><option *ngFor="let opNtM of OpNtM" value="1">{{opNtM}}</option></select>
 									</div>
 									<div class="input-group">
-										<input type="text" class="form-control" id="NtM" aria-describedby= "basic-addon1" placeholder="Nivel taxonómico" />
+										<select class="custom-select" id="NtM"><option selected="">Escoger...</option><option *ngFor="let opNtM of OpNtM" value="1">{{opNtM}}</option></select>
 									</div>
 								</div>
 							</form>
-							<form style="margin-top: 71px;" action="" class="form-horizontal col-md-2">
+							<form style="margin-top: 71px; width: 100%;" action="" class="form-horizontal col-md-2">
 								<div class="form-group">
 									<label for="actividades" class="control-label">Actividades:</label>
 									<div class="input-group">
@@ -523,7 +523,7 @@
 									</div>
 								</div>
 							</form>
-							<form style="margin-top: 71px;" action="" class="form-horizontal col-md-4">
+							<form  style="margin-top: 71px;" action="" class="form-horizontal col-md-4">
 								<div class="form-group">
 									<div class="col-md-12">
 										<label for="opc" class="control-label">Competencias:</label>
@@ -560,13 +560,13 @@
 								<div class="form-group">
 									<label for="Eva" class="control-label">Evaluación:</label>
 									<div class="input-group">
-										<input type="text" class="form-control" id="Eva" aria-describedby= "basic-addon1" placeholder="Evaluación" />
+										<select class="custom-select" id="Eva"><option selected="">Escoger...</option><<option *ngFor="let opEva of OpEva" value="1">{{opEva}}</option></select>
 									</div>
 									<div class="input-group">
-										<input type="text" class="form-control" id="Eva" aria-describedby= "basic-addon1" placeholder="Evaluación" />
+										<select class="custom-select" id="Eva"><option selected="">Escoger...</option><<option *ngFor="let opEva of OpEva" value="1">{{opEva}}</option></select>
 									</div>
 									<div class="input-group">
-										<input type="text" class="form-control" id="Eva" aria-describedby= "basic-addon1" placeholder="Evaluación" />
+										<select class="custom-select" id="Eva"><option selected="">Escoger...</option><<option *ngFor="let opEva of OpEva" value="1">{{opEva}}</option></select>
 									</div>
 								</div>
 							</form>
@@ -597,7 +597,7 @@
 									</div>
 								</div>
 							</form>
-							<form action="" class="form-horizontal col-md-3">
+							<form  action="" class="form-horizontal col-md-3">
 								<div class="form-group">
 									<div class="col-md-12">
 										<label for="Material" class="control-label">Material:</label>
@@ -668,7 +668,7 @@
 									</div>
 								</div>
 							</form>
-							<form style="margin-top: 24px;" action="" class="form-horizontal col-md-3">
+							<form style="margin-top: 24px; " action="" class="form-horizontal col-md-3">
 								<div class="form-group">
 									<div class="col-md-12">
 										<label for="Instrumento" class="control-label">Instrumento:</label>
@@ -698,7 +698,7 @@
 									</div>
 								</div>
 							</form>
-							<form action="" class="form-horizontal col-md-4">
+							<form  action="" class="form-horizontal col-md-4">
 								<div class="form-group">
 									<label for="PorEva" class="control-label">Porcentaje de la evaluación que se obtiene con cada instrumento:</label>
 									<div class="input-group">
@@ -743,7 +743,7 @@
 									</div>
 								</div>
 							</form>
-							<form action="" class="form-horizontal col-md-3">
+							<form  action="" class="form-horizontal col-md-3">
 								<div class="form-group">
 									<label for="Tit" class="control-label">Revisión de pertenecia escolar:</label>
 									<div class="input-group">
@@ -751,7 +751,7 @@
 									</div>
 								</div>
 							</form>
-							<form action="" class="form-horizontal col-md-4">
+							<form  action="" class="form-horizontal col-md-4">
 								<div class="form-group">
 									<label for="PorEva" class="control-label">Sello escolar:</label>
 									<div class="input-group">
@@ -765,7 +765,7 @@
 						<form action="" class="form-horizontal col-md-4">
 							<div class="">
 								<div class="">
-									<a routerLink='menu'><button class="boton btn btn-lg" type="button" name="button">Guardar</button></a>
+									<a routerLink='/menu'><button class="boton btn btn-lg" type="button" name="button">Guardar</button></a>
 								</div>
 							</div>
 						</form>
@@ -787,4 +787,4 @@
 				</div>
 			</div>
 		</div>
-	</main>
+</main>

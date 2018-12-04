@@ -3,10 +3,10 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1"><span class="navbar-toggler-icon" aria-controls="navbar1" aria-expanded="false" aria-label="Toggle navigation"></span></button>
             <div class="collapse navbar-collapse" id="navbar1">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a routerLink='/perfil_usuario' class="navbar-brand"><span><img src="assets/svg/si-glyph-person-2.svg" id="perfil" /><span class="sr-only" id="texto"> Perfil de Usuario</span></span></a>
-                    </li>
                     <li class="nav-item">
+                        <a routerLink='user/perfil-usuario' class="navbar-brand"><span><img src="assets/svg/si-glyph-person-2.svg" id="perfil" /><span class="sr-only" id="texto"> Perfil de Usuario</span></span></a>
+                    </li>
+                    <li class="nav-item active">
                         <a class="nav-link" routerLink='/menu'><strong>Home</strong><span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
@@ -17,7 +17,7 @@
                     </li>
                 </ul>
                 <form class= "form-inline navbar-form navbar-right">
-                    <a routerLink='/login'><button class= "bt btn btn-outline-success" type= "button" ><span><strong>Cerrar Sesion</strong></span></button></a>
+                    <a routerLink='user/login'><button class= "bt btn btn-outline-success" type= "button" ><span><strong>Cerrar Sesion</strong></span></button></a>
                 </form>
                 <div class="divider"></div>
             </div>

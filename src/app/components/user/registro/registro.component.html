@@ -1,0 +1,159 @@
+<main>
+		<div class="container-fluid">
+			<div class="row justify-content-md-center">
+				<div class="jumbotron mid col-md-12 caja1">
+					<form #formRegister="ngForm" (ngSubmit)="onRegister()" class="form-horizontal">
+							<div class="row">
+									<div class="col-md-4">
+										<label for="Nombre" class="sr-only control-label">Nombre:</label>
+										<div class="form-group">
+											<input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre:" [(ngModel)]="user.nombre" required/>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<label for="ApellidoP" class="sr-only control-label">Apellido Paterno:</label>
+										<div class="form-group">
+											<input type="text" class="form-control" id="apellidop" placeholder="A.Paterno:" [(ngModel)]="user.apellidp" required/>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<label for="ApellidoM" class="sr-only control-label">Apellido Materno:</label>
+										<div class="form-group">
+											<input type="text" class="form-control" id="apellidom" placeholder="A.Materno" [(ngModel)]="user.apellidom" required/>
+										</div>
+									</div>
+							</div>
+							<br>
+							<div class="row">
+									<div class="col-md-6 ">
+										<label for="Fecha" class="sr-only control-label">Fecha:</label>
+										<div class="form-group">
+											<input type="date" class="form-control" id="date" [(ngModel)]="user.date" required/>
+										</div>
+									</div>
+									<div class="col-md-6 correo">
+										<label for="Correo" class="sr-only  control-label">Correo:</label>
+										<div class="form-group">
+											<input type="text" class="form-control" id="correo" placeholder="Correo Electronico" [(ngModel)]="user.correo" required/>
+										</div>
+									</div>
+							</div>
+							<br>
+							<div class="row">
+									<div class="col-md-6">
+										<label for="contras" class="sr-only control-label col-md-6">Contraseña:</label>
+										<div class="form-group">
+											<input type="text" class="form-control" id="contraseña" placeholder="Contraseña" [(ngModel)]="user.contras" required/>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<label for="confcontra" class="sr-only control-label col-md-6">Confirmar Contraseña:</label>
+										<div class="form-group">
+											<input type="text" class="form-control" id="confcontra" placeholder="Confirmar Contraseña" [(ngModel)]="user.confcontra" required/>
+										</div>
+									</div>
+							</div>
+							<div class="row">
+									<div class="col-md-6">
+										<label for="CCT" class="sr-only control-label">CCT(Clave de Centro de Trabajo):</label>
+										<div class="form-group">
+											<input type="text" class="form-control" id="cct" placeholder="Clave de Centro de Trabajo" [(ngModel)]="user.cct" required/>
+										</div>
+									</div>
+									<div class="col-md-6 correo">
+										<label for="PerfAca" class="control-label">Perfil Academico:</label>
+										<div class="form-group">
+											<select class="form-control" id="PerfAca"  [(ngModel)]="user.PerfAca" required>
+		                    	        		<option value="">Maestria</option>
+		                        	    		<option value="">Doctorado</option>
+		                            			<option value="">Posgrado</option>
+				                            	<option value="">Licenciado</option>
+			                        		</select>
+		                           		</div>
+
+									</div>
+							</div>
+							<div class="row">
+									<div class="col-md-6">
+										<label for="cedula" class=" sr-only control-label">Cedula Profesional:</label>
+										<div class="form-group">
+											<input type="text" class="form-control" id="cedula" placeholder="Cedula Profesional" [(ngModel)]="user.cedula" required/>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<label for="ClaJer" class=" sr-only control-label">Clave Jerarquia:</label>
+										<div class="form-group">
+											<input type="text" class="form-control" id="clavejer" placeholder="Clave Jerarquia" [(ngModel)]="user.ClaJer" required/>
+										</div>
+									</div>
+							</div>
+							<div class="row">
+									<div class="col-md-12 correo">
+										<label for="direccion" class="sr-only control-label">Dirección:</label>
+										<div class="form-group">
+											<input type="text" class="form-control" id="direccion" placeholder="Dirección" [(ngModel)]="user.Direccion" required/>
+										</div>
+									</div>
+							</div>
+							<div class="row">
+									<div class="col-md-4">
+										<label for="cp" class=" sr-only control-label">Codigo Postal:</label>
+										<div class="form-group">
+											<input type="text" class="form-control" id="cp" placeholder="Codigo Postal" [(ngModel)]="user.cp" required/>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<label for="colonia" class=" sr-only control-label">Colonia:</label>
+										<div class="form-group">
+											<input type="text" class="form-control" id="colonia" placeholder="Colonia" [(ngModel)]="user.colonia" required/>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<label for="ciudad" class=" sr-only control-label">Ciudad:</label>
+										<div class="form-group">
+											<input type="text" class="form-control" id="ciudad" placeholder="Ciudad" [(ngModel)]="user.ciudad" required/>
+										</div>
+									</div>
+							</div>
+							<div class="row">
+									<div class="col-md-4">
+										<label for="tp" class=" sr-only control-label">Telefono Principal:</label>
+										<div class="form-group">
+											<input type="text" class="form-control" id="tp" placeholder="Telefono Principal" [(ngModel)]="user.tp" required/>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<label for="ts" class=" sr-only control-label">Telefono Secundario:</label>
+										<div class="form-group">
+											<input type="text" class="form-control" id="ts" placeholder="Telefono Secundario" [(ngModel)]="user.ts" required/>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<label for="rol" class=" sr-only control-label">Rol Usuario:</label>
+										<div class="form-group">
+											<input type="text" class="form-control" id="rol" placeholder="Rol Usuario" [(ngModel)]="user.rol" required/>
+										</div>
+									</div>
+							</div>
+					</form>
+					<div class="row botones">
+						<form action="" class="form-horizontal col-md-6">
+							<div class="">
+								<div class="">
+									<a routerLink='user/login'><button class="btn btn-primary btn-lg" type="button" name="button">Guardar</button></a>
+								</div>
+							</div>
+						</form>
+						<form action="" class="form-horizontal col-md-6">
+							<div class="">
+								<div class="">
+									<a routerLink=''><button class="btn btn-primary btn-lg" type="button" name="button2">Cancelar</button></a>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<br>
+		</div>
+	</main>
