@@ -5,7 +5,7 @@
 					<form #formRegister="ngForm" (ngSubmit)="onRegister()" class="form-horizontal">
 							<div class="row">
 									<div class="col-md-4">
-										<label for="Nombre" class="sr-only control-label">Nombre:</label>
+										<label for="nombre" class="sr-only control-label">Nombre:</label>
 										<div class="form-group">
 											<input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre:" [(ngModel)]="user.nombre" required/>
 										</div>
@@ -137,19 +137,13 @@
 							</div>
 					</form>
 					<div class="row botones">
-						<form action="" class="form-horizontal col-md-6">
-							<div class="">
-								<div class="">
-									<a routerLink='user/login'><button class="btn btn-primary btn-lg" type="button" name="button">Guardar</button></a>
+						<form action="" class="form-inline col-md-12">
+								<div class="col-md-6">
+									<a routerLink='user/login' class="btn btn-primary ">Guardar</a>
 								</div>
-							</div>
-						</form>
-						<form action="" class="form-horizontal col-md-6">
-							<div class="">
-								<div class="">
+								<div class="col-md-6">
 									<a routerLink=''><button class="btn btn-primary btn-lg" type="button" name="button2">Cancelar</button></a>
 								</div>
-							</div>
 						</form>
 					</div>
 				</div>

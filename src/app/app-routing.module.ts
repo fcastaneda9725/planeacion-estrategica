@@ -2,14 +2,14 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 
+import { HomeComponent } from 'src/app/components/home/home.component';
 import { LoginComponent } from 'src/app/components/user/login/login.component';
 import { RegistroComponent } from 'src/app/components/user/registro/registro.component';
-import { HomeComponent } from 'src/app/components/home/home.component';
 import { MenuComponent } from 'src/app/components/menu/menu.component';
-import { BuscarPeComponent } from 'src/app/components/buscar-pe/buscar-pe.component';
-import { ElaboracionPeComponent } from 'src/app/components/elaboracion-pe/elaboracion-pe.component';
-import { ModificarPeComponent } from 'src/app/components/modificar-pe/modificar-pe.component';
 import { PerfilUsuarioComponent } from 'src/app/components/user/perfil-usuario/perfil-usuario.component';
+import { ModificarPeComponent } from 'src/app/components/modificar-pe/modificar-pe.component';
+import { ElaboracionPeComponent } from 'src/app/components/elaboracion-pe/elaboracion-pe.component';
+import { BuscarPeComponent } from 'src/app/components/buscar-pe/buscar-pe.component';
 
 const routes : Routes = [
 
