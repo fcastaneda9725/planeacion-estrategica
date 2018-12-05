@@ -14,12 +14,12 @@ import { BuscarPeComponent } from 'src/app/components/buscar-pe/buscar-pe.compon
 const routes : Routes = [
 
   { path: '', component: HomeComponent },
-  { path: 'user/login', component: LoginComponent },
-  { path: 'user/registro', component: RegistroComponent },
   { path: 'menu', component: MenuComponent},
-  { path: 'user/perfil-usuario', component: PerfilUsuarioComponent },
   { path: 'modificar-pe', component: ModificarPeComponent},
   { path: 'elaboracion-pe', component: ElaboracionPeComponent},
+  { path: 'user/login', component: LoginComponent },
+  { path: 'user/perfil-usuario', component: PerfilUsuarioComponent },
+  { path: 'user/registro', component: RegistroComponent },
   { path: 'buscar-pe', component: BuscarPeComponent}
 
 ];
