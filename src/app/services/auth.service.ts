@@ -5,6 +5,7 @@ import { map } from 'rxjs/operators';
 import { isNullOrUnderfined } from 'util';
 
 import { UserInterface } from '../models/user-interface';
+import { UsersService } from './users.service';
 
 @Injectable({
   providedIn: 'root'
@@ -12,44 +13,20 @@ import { UserInterface } from '../models/user-interface';
 export class AuthService {
 
   constructor(private http: HttpClient) { }
-headers: HttpHeaders = new HttpHeaders({
-  "Content-Type": "application/json"
-});
 
-registerUser(name: string, email: string, password: string){
-  const url_api= "";
-  return this.htttp.post<UserInterface>(url_api,{name: name, email: email, password: password},{headers: this.headers}).pipe(map(data => data ));
-}
- loginuser(email: string, password: string): Observable<any>{
-   const url_api= "";
-   return this.htttp.post<UserInterface>(url_api,{email,password},{headers: this.headers}).pipe(map(data => data));
+ login(email: string, password: string){
+   const url_api= "https://api.maindesign.mx/api/v1/users/login";
+   return this.http.post<{acces_token: string}>(url_api,{email,password})
  }
-  setUser(user: UserInterface) void {
-    let user_string = JSON.stringify(user);
-    localStorage.setItem('currentUser',user_string);
+  getToken(): boolean{
+    return localStorage.getItem('accessToken') !== null;
   }
-  setToken(token) void {
-    localStorage.setItem('accessToken', token);
-  }
-  getToken(){
-    return localStorage.getItem('accessToken');
-  }
-
-  getCurrentUser():UserInterface {
-    let user_string= localStorage.getItem('currentUsert');
-    if(!isNullOrUnderfined(user_string)){
-      let user: UserInterface = JSON.parse(user_string);
-      return user;
-    }else{
-      return null;
-    }
-  }
-
-  logoutUser(){
-    let accessToken= localStorage.getItem('accessToken');
-    const url_api= "*/logout?acces_token=${accessToken}";
-    localStorage.removeItem('accessToken');
-    localStorage.removeItem('currentUser');
-    return this.htttp.post<UserInterface>(url_api, {headers: this.headers});
+  logout(){
+    const url_api= "https://api.maindesign.mx/api/v1/users/logout?acces_token=${accessToken}";
+    this.userProvider.Logout().subscribe(res =>{
+      console.log(res);
+    });
+    localStorage.removeITem("acces_token");
+    return true;
   }
 }
