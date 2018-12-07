@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
-import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-login',
@@ -15,15 +14,14 @@ export class LoginComponent implements OnInit {
   public error: boolean;
 
   constructor(private auth: AuthService,
-    private router: Router,
-    private http: HttpClient
+    private router: Router
   ) { }
 
   ngOnInit() {
   }
 
   public login(email, password){
-    this.auth.login(email, password).suscribe(
+    this.auth.login(email, password).subscribe(
       response=>{
         console.log(response)
         localStorage.setItem("acces_token",response.acces_token);

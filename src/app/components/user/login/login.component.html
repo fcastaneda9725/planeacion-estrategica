@@ -7,7 +7,7 @@
 	    			<div class="row justify-content-md-center">
 		    			<div style="" class="jumbotron mid col-md-6 caja2">
 	    					<div class="row justify-content-md-center">
-		    					<form #formRegister="ngForm" (ngSubmit)="login(email.value, password.value)" class="form-horizontal col-md-8">
+		    					<form #formRegister="ngForm" (ngSubmit)="login(email, password)" class="form-horizontal col-md-8">
 		    						<div class=" form-group has-error">
 	    								<label for="Usuario" class=" control-label"><p class="letra"><strong>Usuario/Correo Electronico: </strong> </p></label>
 	    								<input class="form-control" type="text" name="email" [(ngModel)]="email" placeholder="Correo Electronico">

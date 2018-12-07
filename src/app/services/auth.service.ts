@@ -12,11 +12,18 @@ import { UsersService } from './users.service';
 })
 export class AuthService {
 
-  constructor(private http: HttpClient) { }
+  interface user {
+    email: string;
+    password: string;
+  }
+  
 
- login(email: string, password: string){
+  constructor(private http: HttpClient,
+  private userProvider: UsersService) { }
+
+ login(user.email, user.password){
    const url_api= "https://api.maindesign.mx/api/v1/users/login";
-   return this.http.post<{acces_token: string}>(url_api,{email,password})
+   return this.http.post<{acces_token: string}>(url_api,{user})
  }
   getToken(): boolean{
     return localStorage.getItem('accessToken') !== null;
